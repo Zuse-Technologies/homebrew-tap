@@ -7,7 +7,7 @@ cask "truzt" do
   sha256 arm:   "PLACEHOLDER_ARM64_SHA256",
          intel: "PLACEHOLDER_AMD64_SHA256"
 
-  url "https://github.com/Zuse-Technologies/Trust/releases/download/v#{version}/Truzt-#{arch}-#{version}.pkg"
+  url "https://pkgs.truzt.lk/release/v#{version}/Truzt-#{arch}-#{version}.pkg"
   name "Truzt"
   desc "Secure mesh network client with desktop UI"
   homepage "https://truzt.lk/"
