@@ -12,14 +12,23 @@ cask "truzt" do
   desc "Secure mesh network client with desktop UI"
   homepage "https://truzt.lk/"
 
-  pkg "Truzt-#{arch}-#{version}.pkg", allow_untrusted: true
+  installer script: {
+    executable: "/usr/sbin/installer",
+    args:       ["-pkg", "#{staged_path}/Truzt-#{arch}-#{version}.pkg", "-target", "/", "-allowUntrusted"],
+    sudo:       true,
+  }
+
+  postflight do
+    ohai "Truzt installed successfully! Run 'truzt up' to connect."
+  end
 
   uninstall launchctl: "truzt",
-  pkgutil:   "com.zuselk.Truzt",
-  delete:    [
-    "/usr/local/bin/truzt",
-    "/usr/local/bin/truzt-ui",
-  ]
+            pkgutil:   "com.zuselk.Truzt",
+            delete:    [
+              "/usr/local/bin/truzt",
+              "/usr/local/bin/truzt-ui",
+              "/Applications/Truzt.app",
+            ]
 
   zap trash: [
     "~/Library/Application Support/Truzt",
