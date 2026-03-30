@@ -5,21 +5,21 @@
 class Truzt < Formula
   desc "Truzt — secure mesh network client."
   homepage "https://truzt.lk/"
-  version "2.7.2"
+  version "2.7.3"
   license "BSD-3-Clause"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Zuse-Technologies/Trust/releases/download/v2.7.2/truzt_2.7.2_darwin_amd64.tar.gz"
-      sha256 "7f9c5027391247fc4e4b23e59d14962386f97ebc765575144607d1ed24c40612"
+      url "https://github.com/Zuse-Technologies/Trust/releases/download/v2.7.3/truzt_2.7.3_darwin_amd64.tar.gz"
+      sha256 "f87b1941fa48d26c6eb3af7ccaf91ba12e37fb7dc105220ecbaddc3905ca4831"
 
       define_method(:install) do
         bin.install "truzt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Zuse-Technologies/Trust/releases/download/v2.7.2/truzt_2.7.2_darwin_arm64.tar.gz"
-      sha256 "3a2cb29a67882ebc4455b69b880113873664cd356d70618e83ac0820ada68bd8"
+      url "https://github.com/Zuse-Technologies/Trust/releases/download/v2.7.3/truzt_2.7.3_darwin_arm64.tar.gz"
+      sha256 "3ca2769786fe03f846a9a47361e0a862ade1e457d32a0b5e32410c36ecbd2246"
 
       define_method(:install) do
         bin.install "truzt"
@@ -29,22 +29,22 @@ class Truzt < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Zuse-Technologies/Trust/releases/download/v2.7.2/truzt_2.7.2_linux_amd64.tar.gz"
-      sha256 "45ceef5012075a9ab4e6a7e6582149bf6b5483f565c258ebaaea63ba36627c72"
+      url "https://github.com/Zuse-Technologies/Trust/releases/download/v2.7.3/truzt_2.7.3_linux_amd64.tar.gz"
+      sha256 "03ba6aeac4aef51b1fe80c97d911124e55233a40ab5b1680d25654fd58e77a12"
       define_method(:install) do
         bin.install "truzt"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/Zuse-Technologies/Trust/releases/download/v2.7.2/truzt_2.7.2_linux_armv6.tar.gz"
-      sha256 "08806b0e64a180c92fe2a2aa7ab57a9241c4f20fdcaa2bbadb5884b6402ead46"
+      url "https://github.com/Zuse-Technologies/Trust/releases/download/v2.7.3/truzt_2.7.3_linux_armv6.tar.gz"
+      sha256 "710b35b52f594cbdf3202eb9f13a9d6a1ec4bfa61c469eef351ca373993be69d"
       define_method(:install) do
         bin.install "truzt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Zuse-Technologies/Trust/releases/download/v2.7.2/truzt_2.7.2_linux_arm64.tar.gz"
-      sha256 "2fddd660d065e1d712f278c9c18bbcee0332f79f7768d8a4fb4faf843fde1232"
+      url "https://github.com/Zuse-Technologies/Trust/releases/download/v2.7.3/truzt_2.7.3_linux_arm64.tar.gz"
+      sha256 "c64a5b3af336c20b27aab5de102c876a8aee592d270e100687d0347ac14ed984"
       define_method(:install) do
         bin.install "truzt"
       end
