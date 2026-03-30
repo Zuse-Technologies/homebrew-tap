@@ -11,7 +11,7 @@ class Truzt < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Zuse-Technologies/Trust/releases/download/v2.7.2/truzt_2.7.2_darwin_amd64.tar.gz"
-      sha256 "028f2123340ce5da82850dbf7f2c3d1b02655fbb88545508bfad9c97952e1ee8"
+      sha256 "7f9c5027391247fc4e4b23e59d14962386f97ebc765575144607d1ed24c40612"
 
       define_method(:install) do
         bin.install "truzt"
@@ -19,7 +19,7 @@ class Truzt < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/Zuse-Technologies/Trust/releases/download/v2.7.2/truzt_2.7.2_darwin_arm64.tar.gz"
-      sha256 "7206796f0f535721fabfe0fdbe43e97a869b34af4f6581a27c723d89f5ae6775"
+      sha256 "3a2cb29a67882ebc4455b69b880113873664cd356d70618e83ac0820ada68bd8"
 
       define_method(:install) do
         bin.install "truzt"
@@ -30,21 +30,21 @@ class Truzt < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/Zuse-Technologies/Trust/releases/download/v2.7.2/truzt_2.7.2_linux_amd64.tar.gz"
-      sha256 "a059be250b4c45705577ca76c55b3678c3eb869068be4bddb6ebae60f4a79922"
+      sha256 "45ceef5012075a9ab4e6a7e6582149bf6b5483f565c258ebaaea63ba36627c72"
       define_method(:install) do
         bin.install "truzt"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/Zuse-Technologies/Trust/releases/download/v2.7.2/truzt_2.7.2_linux_armv6.tar.gz"
-      sha256 "c1ea5f853ea342b7f8906368c742598ba9a0c8cdc5447a371e589ce77563a071"
+      sha256 "08806b0e64a180c92fe2a2aa7ab57a9241c4f20fdcaa2bbadb5884b6402ead46"
       define_method(:install) do
         bin.install "truzt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Zuse-Technologies/Trust/releases/download/v2.7.2/truzt_2.7.2_linux_arm64.tar.gz"
-      sha256 "9cfbbef4ac6cdc3f0acf070632365c87fb4d49d19787aa5bf3cb6dd610163873"
+      sha256 "2fddd660d065e1d712f278c9c18bbcee0332f79f7768d8a4fb4faf843fde1232"
       define_method(:install) do
         bin.install "truzt"
       end
