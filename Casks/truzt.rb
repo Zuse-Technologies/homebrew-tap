@@ -4,8 +4,8 @@ cask "truzt" do
   arch arm: "arm64", intel: "amd64"
 
   version "2.9.0"
-  sha256 arm:   "215ffc2e8205e98eb0ccd8a108389d0ae50c6abba13051511ff501adc712aced",
-         intel: "803f4a24822a38967633fa4b2836b88f9471ac93f4fe97f7e318bbc1eee03145"
+  sha256 arm:   "35e1711f060977fa7e520c9d8aea5d5022e484a2665fd5d5652845e7e7ceeeb7",
+         intel: "a9bc9f58802871c19e6c87aeae9458ff3edf1d5fd60223fbff3fb3ec09b61dec"
 
   url "https://pkgs.truzt.lk/release/v#{version}/Truzt-#{arch}-#{version}.pkg"
   name "Truzt"
