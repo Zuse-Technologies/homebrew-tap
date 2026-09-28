@@ -1,4 +1,4 @@
-## typed: false
+# typed: false
 # frozen_string_literal: true
 # Auto-updated by the Truzt release pipeline. DO NOT EDIT.
 class Truzt < Formula
